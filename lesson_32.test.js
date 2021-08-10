@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals')
 const { convertMinutestoSeconds, getTheNextNumbOf, getFirstElementOfArg, getSecondsInHour, getLastElement, mergeArguments, getAllBut, transformData,
     getFullName, addContinent, getTheLongestString, sum } = require('./lesson_32')
 

@@ -1,5 +1,3 @@
-const { type } = require("os");
-
 /*
 5 ➞ 300
 3 ➞ 180
