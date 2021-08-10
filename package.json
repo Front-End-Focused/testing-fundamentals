@@ -1,0 +1,21 @@
+{
+  "name": "testing-fundamentals",
+  "version": "1.0.0",
+  "description": "Основы тестирования",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Front-End-Focused/testing-fundamentals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Front-End-Focused/testing-fundamentals/issues"
+  },
+  "homepage": "https://github.com/Front-End-Focused/testing-fundamentals#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
