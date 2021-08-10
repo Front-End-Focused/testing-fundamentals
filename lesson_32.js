@@ -1,3 +1,5 @@
+const { type } = require("os");
+
 /*
 5 ➞ 300
 3 ➞ 180
@@ -10,7 +12,7 @@ const convertMinutestoSeconds = (minutes) => typeof minutes === 'number' ? minut
  9 ➞ 10
  20 ➞ 21
  */
-const getTheNextNumbOf = (n) => isNaN(n) ? n + 1 : n;
+const getTheNextNumbOf = (n) => n + 1;
 
 /*
  (1,2,3) ➞ 1
@@ -48,9 +50,52 @@ const getAllBut = (arr, target) => arr.filter((item) => item !== target);
 {firstName: 'Larry', lastName: 'Fox', age: 64, size: 176, weight: 5} 
 {firstName: 'Larry', lastName: 'Fox', age: 64, size: '176cm', weight: '76kg'}
 */
-function transformData() {}
+function transformData(obj) {
+    if (obj && obj.size && obj.weight && obj.firstName && obj.lastName && obj.age) {
+        obj.size += "cm";
+        obj.weight += "kg";
+        return obj;
+    }
+    return '';
+}
 
-function getFullName() {}
+
+function getFullName(obj) {
+    if (obj && 'firstName' in obj && obj.hasOwnProperty('lastName')) {
+        return `${obj.firstName} ${obj.lastName}`
+    }
+    return ""
+}
+
+function addContinent(arr, str) {
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'object' && typeof str === 'string' && arr[i] != null) {
+            arr[i].continent = str;
+        }
+    }
+    return arr
+}
+
+function getTheLongestString(arr) {
+    let res = '';
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'string' && arr[i].length > res.length) {
+            res = arr[i]
+        }
+    }
+    return res
+}
+
+function sum(arr, num) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'number' && typeof num === 'number' && arr[i] > num) {
+            sum += arr[i]
+        }
+    }
+    return sum
+}
+
 
 module.exports = {
     convertMinutestoSeconds,
@@ -62,4 +107,7 @@ module.exports = {
     getAllBut,
     transformData,
     getFullName,
+    addContinent,
+    getTheLongestString,
+    sum,
 }
