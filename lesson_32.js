@@ -77,10 +77,17 @@ function getTheLongestString(arr){
     }
     clone.sort(function(a,b) {
       return a - b
-      
     })
-    console.log();
-    return clone[clone.length- 1]
+
+    for (let i = 0; i<= arr.length; i++) {
+        if(arr[i].length == clone[clone.length - 1] ){
+          console.log(arr[i]);
+          return arr[i]
+        }
+    }
+    
+    // console.log(clone[clone.length- 1]);
+    
 }
 
 getTheLongestString(['help', 'me','Oleja'])
