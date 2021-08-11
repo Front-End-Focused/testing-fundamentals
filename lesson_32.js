@@ -68,7 +68,24 @@ function AddContinent(input,str){
     return input
 }
 
-AddContinent([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia')
+// AddContinent([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia')
+
+function getTheLongestString(arr){
+    let clone = []
+    for (let i = 0; i <= arr.length - 1; i++) {
+      clone.push(arr[i].length)
+    }
+    clone.sort(function(a,b) {
+      return a - b
+      
+    })
+    console.log();
+    return clone[clone.length- 1]
+}
+
+getTheLongestString(['help', 'me','Oleja'])
+
+
 
 // [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'
 // [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
@@ -85,5 +102,5 @@ module.exports = {
   transformData,
   getFullName,
   AddContinent,
-
+  getTheLongestString,
 };

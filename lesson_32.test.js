@@ -9,6 +9,7 @@ const {
   transformData,
   getFullName,
   AddContinent,
+  getTheLongestString,
 } = require("./lesson_32");
 
 // describe("posetive cases", () => {
@@ -62,6 +63,13 @@ describe('TDD', () => {
   test('Возвращает новый массив объектов', () => {
       expect(AddContinent([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'))
           .toEqual([{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }])
+  });
+
+});
+
+describe('TDD', () => {
+  test('Получить самую длинную строку из массива', () => {
+      expect(getTheLongestString(['help', 'me','Oleja'])).toEqual(5)
   });
 
 });
